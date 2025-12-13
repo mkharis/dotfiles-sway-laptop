@@ -14,6 +14,10 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
+window#waybar.empty #window {
+    opacity: 0;
+}
+
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -70,9 +74,18 @@ button:hover {
     border-radius: 10px;
 }
 
-#window,
+#window {
+    margin: 0 4px;
+    padding: 0 5px;
+    color: #ffffff;
+    background-color: #000000; 
+    border-radius: 10px;
+}
+
 #workspaces {
     margin: 0 4px;
+    color: #ffffff;
+    background-color: #000000; 
 }
 
 /* If workspaces is the leftmost module, omit left margin */
