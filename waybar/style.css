@@ -5,9 +5,9 @@
 }
 
 window#waybar {
-    background-color: transparent;
+    background: transparent;
     color: #ffffff;
-    transition-property: background-color;
+    transition-property: background;
     transition-duration: .5s;
 }
 
@@ -27,29 +27,27 @@ button {
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
 #workspaces button {
     padding: 0 5px;
-    background-color: transparent;
+    background: transparent;
     color: #ffffff;
+    border-radius: 15px;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+#workspaces button.focused,
+#workspaces button.active {
+    color: #020617;
+    background: #ffffff;
+    box-shadow: none;
+    border-radius: 15px;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background: #eb4d4b;
 }
 
 #clock,
@@ -69,24 +67,25 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 5px;
+    padding: 0 8px;
     color: #ffffff;
-    background-color: #000000; 
-    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.88);; 
+    border-radius: 15px;
 }
 
 #window {
-    margin: 0 4px;
-    padding: 0 5px;
+    margin: 0 2px;
+    padding: 0 8px;
     color: #ffffff;
-    background-color: #000000; 
-    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.88); 
+    border-radius: 15px;
 }
 
 #workspaces {
-    margin: 0 4px;
+    padding: 3px;
     color: #ffffff;
-    background-color: #000000; 
+    background: rgba(15, 23, 42, 0.88); 
+    border-radius: 15px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
